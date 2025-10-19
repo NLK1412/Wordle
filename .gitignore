@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Wordle/CopilotIndices/17.14.1231.31060
+/.vs/Wordle/FileContentIndex
+/__pycache__
+/.vs/Wordle/v17
+/.vs
+/UI.py
