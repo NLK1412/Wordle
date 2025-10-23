@@ -1,4 +1,4 @@
-﻿class word:
+﻿class words:
     def __init__(self):
         self.__words = []
         self.__n = 0
