@@ -1,0 +1,3 @@
+data.txt must in the the folder with execution file
+
+download pygame libraries (2.6.1)
