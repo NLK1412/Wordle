@@ -4,7 +4,7 @@ class flip:
     def __init__(self):
         self.is_flip = 0
         self.progress = 0
-        self.speed = 20
+        self.speed = 5
         self.color = (255, 255, 255)
     def update(self, color):
         self.progress += self.speed

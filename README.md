@@ -1,5 +1,7 @@
 ﻿# Wordle
 ## Trịnh Duy Nhân - 24127094
+## Github project's link: https://github.com/NLK1412/Wordle
+
 ### Installation
 
 **Python version: 3.11+**
