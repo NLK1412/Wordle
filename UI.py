@@ -134,7 +134,7 @@ def draw_game_over_screen(player_won, answer):
     screen.blit(restart_text, restart_rect)
     
 def draw_game_over_screen_survival(answer, round):
-    screen.blit(overlay_surface, (0, 0)
+    screen.blit(overlay_surface, (0, 0))
     message = "GAME OVER!"
     message_color = RED
 
