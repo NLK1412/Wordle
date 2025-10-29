@@ -23,10 +23,9 @@ RED = (255, 0, 0)
 YELLOW = (255, 255, 0)
 GREEN = (0, 255, 0)
 
-# Các hằng số cho lưới
 GRID_SIZE = 5
 CELL_SIZE = 60
-CELL_PADDING = 7 # Khoảng cách giữa các ô
+CELL_PADDING = 7 
 GRID_START_X = (SCREEN_WIDTH - (GRID_SIZE * CELL_SIZE + (GRID_SIZE - 1) * CELL_PADDING)) // 2
 GRID_START_Y = 80
 
@@ -105,10 +104,8 @@ def draw_menu_screen():
 
 
 def draw_game_over_screen(player_won, answer):
-    # 1. Vẽ lớp phủ làm mờ
-    screen.blit(overlay_surface, (0, 0)) # Vẽ lớp phủ lên toàn bộ màn hình
+    screen.blit(overlay_surface, (0, 0)) 
 
-    # 2. Vẽ thông báo kết quả
     if player_won:
         message = "YOU WIN!"
         message_color = GREEN
@@ -126,14 +123,18 @@ def draw_game_over_screen(player_won, answer):
         answer_rect = answer_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
         screen.blit(answer_text, answer_rect) 
 
-    restart_message = "PRESS ENTER TO RESTART OR ESC TO BACK TO MENU"
+    restart_message = "ENTER TO RESTART"
     restart_text = RESTART_FONT.render(restart_message, True, WHITE)
     restart_rect = restart_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
     screen.blit(restart_text, restart_rect)
     
+    restart_message = "ESC TO BACK TO MENU"
+    restart_text = RESTART_FONT.render(restart_message, True, WHITE)
+    restart_rect = restart_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 90))
+    screen.blit(restart_text, restart_rect)
+    
 def draw_game_over_screen_survival(answer, round):
-    # 1. Vẽ lớp phủ làm mờ
-    screen.blit(overlay_surface, (0, 0)) # Vẽ lớp phủ lên toàn bộ màn hình
+    screen.blit(overlay_surface, (0, 0)
     message = "GAME OVER!"
     message_color = RED
 
@@ -163,8 +164,7 @@ def draw_game_over_screen_survival(answer, round):
     screen.blit(restart_text, restart_rect)
 
 def draw_finish_round_screen_survival(round):
-    # 1. Vẽ lớp phủ làm mờ
-    screen.blit(overlay_surface, (0, 0)) # Vẽ lớp phủ lên toàn bộ màn hình
+    screen.blit(overlay_surface, (0, 0)) 
     message = "WELL DONE!"
     message_color = GREEN
 
@@ -188,10 +188,8 @@ def draw_finish_round_screen_survival(round):
     screen.blit(restart_text, restart_rect)
 
 def draw_timed_game_over_screen(player_won, answer, remaining_sec):
-    # 1. Vẽ lớp phủ làm mờ
-    screen.blit(overlay_surface, (0, 0)) # Vẽ lớp phủ lên toàn bộ màn hình
+    screen.blit(overlay_surface, (0, 0)) 
 
-    # 2. Vẽ thông báo kết quả
     if player_won:
         message = "YOU WIN!"
         message_color = GREEN
@@ -211,7 +209,7 @@ def draw_timed_game_over_screen(player_won, answer, remaining_sec):
 
         message = "THE ANSWER IS: " + answer
         answer_text = RESTART_FONT.render(message, True, WHITE)
-        answer_rect = answer_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
+        answer_rect = answer_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 20))
         screen.blit(answer_text, answer_rect) 
 
     else:
@@ -220,7 +218,12 @@ def draw_timed_game_over_screen(player_won, answer, remaining_sec):
         time_rect = time_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
         screen.blit(time_text, time_rect)
 
-    restart_message = "PRESS ENTER TO RESTART OR ESC TO BACK TO MENU"
+    restart_message = "ENTER TO RESTART"
     restart_text = RESTART_FONT.render(restart_message, True, WHITE)
-    restart_rect = restart_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
+    restart_rect = restart_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 60))
+    screen.blit(restart_text, restart_rect)
+
+    restart_message = "ESC TO BACK TO MENU"
+    restart_text = RESTART_FONT.render(restart_message, True, WHITE)
+    restart_rect = restart_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 100))
     screen.blit(restart_text, restart_rect)

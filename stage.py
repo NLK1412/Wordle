@@ -19,7 +19,7 @@ def normal(attempt, row, col, correct, effect, game, board):
                 board.reset()
             elif event.key == pygame.K_RETURN:
                 game.random()
-                print(game.get_answer())  # For testing purposes; remove or comment out in production)
+                print(game.get_answer())  
                 row = 0
                 col = 0
                 correct = -1
@@ -77,7 +77,7 @@ def survive(Round, attempt, row, col, correct, effect, game, board):
                     Type = 0
                 if event.key == pygame.K_RETURN or event.key == pygame.K_ESCAPE:
                     game.random()
-                    print(game.get_answer())  # For testing purposes; remove or comment out in production)
+                    print(game.get_answer()) 
                     Round = 1
                     row = 0
                     col = 0
@@ -88,7 +88,7 @@ def survive(Round, attempt, row, col, correct, effect, game, board):
                 if event.key == pygame.K_RETURN:
                     Round += 1
                     game.random()
-                    print(game.get_answer())  # For testing purposes; remove or comment out in production)
+                    print(game.get_answer())  
                     row = 0
                     col = 0
                     correct = -1
@@ -157,7 +157,6 @@ def timed_mode(attempt, row, col, correct, effect, game, board, start_time_ticks
             remaining_sec = 0
             correct = 0
 
-    # --- 2. XỬ LÝ SỰ KIỆN ---
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             return 0, Type, start_time_ticks, final_sec, row, col, correct, effect, game, board
@@ -168,14 +167,14 @@ def timed_mode(attempt, row, col, correct, effect, game, board, start_time_ticks
                 col = 0
                 final_sec = 0
                 game.random()
-                print(game.get_answer())  # For testing purposes; remove or comment out in production))
+                print(game.get_answer())  
                 correct = -1
                 UI.reset_game()
                 board.reset()
             elif event.key == pygame.K_RETURN:
                 final_sec = 0
                 game.random()
-                print(game.get_answer())  # For testing purposes; remove or comment out in production)
+                print(game.get_answer()) 
                 start_time_ticks = pygame.time.get_ticks()
                 row = 0
                 col = 0
@@ -207,7 +206,7 @@ def timed_mode(attempt, row, col, correct, effect, game, board, start_time_ticks
 
     UI.draw_grid()
     board.draw(UI.screen)
-    # Vẽ đồng hồ
+
     minutes = 0
     seconds = 0
     if final_sec != 0:

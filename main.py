@@ -19,7 +19,7 @@ def main():
         print(f"!!! Other Error: {e}")
 
     game = gameplay(word_list)
-    print(game.get_answer())  # For testing purposes; remove or comment out in production)
+    print(game.get_answer())  
     running = True
     attempt = 6
     row = 0
@@ -31,8 +31,8 @@ def main():
     board = Keyboard()
     Type = 0
     Round = 1
-    total_duration_sec = 60 # Đặt 5 phút
-    start_time_ticks = 0 # Sẽ được đặt lại khi game bắt đầu
+    total_duration_sec = 30
+    start_time_ticks = 0 
     final_sec = 0
     while running:
         UI.screen.fill(UI.BACKGROUND_COLOR)
